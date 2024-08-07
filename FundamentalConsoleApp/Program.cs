@@ -43,48 +43,61 @@
 #endregion
 
 #region Day3
-// Person suneer = new("Suneer Ranjitkar", new DateTime(1996, 12, 07), 700100360);
-// suneer.PrintDetails();
+// // Person suneer = new("Suneer Ranjitkar", new DateTime(1996, 12, 07), 700100360);
+// // suneer.PrintDetails();
 
-// Person suneerOne = new();
-// suneerOne.name = "Suneer Ranjitkar";
-// suneerOne.dob = new DateTime(1996, 12, 07);
-// suneerOne.nid = 700100360;
-// suneerOne.PrintDetails();
+// // Person suneerOne = new();
+// // suneerOne.name = "Suneer Ranjitkar";
+// // suneerOne.dob = new DateTime(1996, 12, 07);
+// // suneerOne.nid = 700100360;
+// // suneerOne.PrintDetails();
 
-// Person binaya = new();
-// binaya.PrintDetailsWithData("Binaya", 123, DateTime.Now);
+// // Person binaya = new();
+// // binaya.PrintDetailsWithData("Binaya", 123, DateTime.Now);
 
-Console.Write("Enter Title of Page: ");
-string title = Console.ReadLine();
-if (String.IsNullOrWhiteSpace(title) || String.IsNullOrEmpty(title))
-{
-    Console.WriteLine("Enter Valid Title. The Title must have at least 1 character.");
-}
-else
-{
-    Console.Write("Enter Height of Page in inch: ");
-    try
-    {
-        int height = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter Width of Page in inch: ");
-        try
-        {
-            int width = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter Title of Page: ");
+// string title = Console.ReadLine();
+// if (String.IsNullOrWhiteSpace(title) || String.IsNullOrEmpty(title))
+// {
+//     Console.WriteLine("Enter Valid Title. The Title must have at least 1 character.");
+// }
+// else
+// {
+//     Console.Write("Enter Height of Page in inch: ");
+//     try
+//     {
+//         int height = Convert.ToInt32(Console.ReadLine());
+//         Console.Write("Enter Width of Page in inch: ");
+//         try
+//         {
+//             int width = Convert.ToInt32(Console.ReadLine());
 
 
-            Page desktopPage = new(height, width, title);
-            desktopPage.PrintDetails();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine(ex.Message);
-    }
-}
+//             Page desktopPage = new(height, width, title);
+//             desktopPage.PrintDetails();
+//         }
+//         catch (Exception ex)
+//         {
+//             Console.WriteLine(ex.Message);
+//         }
+//     }
+//     catch (Exception ex)
+//     {
+//         Console.WriteLine(ex.Message);
+//     }
+// }
+
+#endregion
+
+#region Day4
+Student student1 = new("Suneer 123 I Don't Know Ranjitkar",new DateTime(1996,12,07),"Texas", "BIT");
+var age = student1.CalculateAge();
+// var initials = student1.NameInitial();
+var shortInitials = student1.GetInitials();
+Student.PrintStudentDetails(shortInitials, age);
+Student.PrintStudentDetails(student1.GetInitials(), student1.CalculateAge());
+// Console.WriteLine(age);
+// Console.WriteLine(initials);
+// Console.WriteLine(shortInitials);
 
 #endregion
