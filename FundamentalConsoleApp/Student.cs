@@ -6,12 +6,13 @@ class Student(string name, DateTime dob, string college, string program)
     public string program = program;
 
     //Calculate age of an student in years and month eg. 22 years and 2 months.
-    public string CalculateAge()
+    //tuple
+    public (string, int) CalculateAge()
     {
         var agespan = DateTime.Now - dob;
         var year = agespan.Days / 365;
         var month = agespan.Days % 365/30;
-        return $"{year} years and {month} months";
+        return ($"{year} years and {month} months", agespan.Days);
     }
 
     //Get name initials of thr student.
@@ -43,5 +44,8 @@ class Student(string name, DateTime dob, string college, string program)
 
     // Print details of a student. Output format : BR is 23 years old.
     //static method does not need object to call it. it can be called by class name.
-    public static void PrintStudentDetails(string initials, string dates) => Console.WriteLine($"{initials} is {dates} old.");
+    //public static void PrintStudentDetails(string initials, string dates) => Console.WriteLine($"{initials} is {dates} old.");
+    public static void PrintStudentDetails(string initials, string dates, int days = 0) => Console.WriteLine($"{initials} is {dates} old.{((days == 0) ? "" : $" {days} days old.")}");
+    
+    public static void PrintStudentDetails(string details) => Console.WriteLine($"Student details: {details}");
 }

@@ -1,17 +1,17 @@
-class Person(string name, DateTime dob, long nid)
+class Person
 {
-    // public Person(){}
-    // //Before Building object.
-    // public Person(string name, DateTime dob, long nid)
-    // {
-    //     this.name = name;
-    //     this.dob = dob;
-    //     this.nid = nid;
-    //     //PrintDetails();
-    // }
-    public string name = name;
-    public long nid = nid;
-    public DateTime dob = dob;
+    public Person(){}
+    //Before Building object.
+    public Person(string name, DateTime dob, long nid)
+    {
+        this.name = name;
+        this.dob = dob;
+        this.nid = nid;
+        //PrintDetails();
+    }
+    public string name;
+    public long nid;
+    public DateTime dob;
 
     //After Building Object.
     public void PrintDetails()

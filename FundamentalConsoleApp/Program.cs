@@ -2,6 +2,7 @@
 // // Console.WriteLine("Hello, World!");
 
 #region Day2
+
 // // //Datatypes
 // // //Numbers: Integers and Floating point
 
@@ -40,9 +41,11 @@
 // // Console.WriteLine("Enter user name:");
 // // string userName = Console.ReadLine();
 // // Console.WriteLine($"Your uppercase username is: {userName.ToUpper()}");
+
 #endregion
 
 #region Day3
+
 // // Person suneer = new("Suneer Ranjitkar", new DateTime(1996, 12, 07), 700100360);
 // // suneer.PrintDetails();
 
@@ -90,14 +93,53 @@
 #endregion
 
 #region Day4
-Student student1 = new("Suneer 123 I Don't Know Ranjitkar",new DateTime(1996,12,07),"Texas", "BIT");
-var age = student1.CalculateAge();
-// var initials = student1.NameInitial();
-var shortInitials = student1.GetInitials();
-Student.PrintStudentDetails(shortInitials, age);
-Student.PrintStudentDetails(student1.GetInitials(), student1.CalculateAge());
-// Console.WriteLine(age);
-// Console.WriteLine(initials);
-// Console.WriteLine(shortInitials);
+
+// Student student1 = new("Suneer 123 I Don't Know Ranjitkar",new DateTime(1996,12,07),"Texas", "BIT");
+// var age = student1.CalculateAge();
+// (string yearsMonths, int days) = student1.CalculateAge();
+// // var initials = student1.NameInitial();
+// var shortInitials = student1.GetInitials();
+// Student.PrintStudentDetails(shortInitials, age.Item1);
+// Student.PrintStudentDetails(student1.GetInitials(), student1.CalculateAge().Item1);
+// Student.PrintStudentDetails(student1.GetInitials(), student1.CalculateAge().Item1, student1.CalculateAge().Item2);
+// Student.PrintStudentDetails(student1.GetInitials());
+// // Console.WriteLine(age);
+// // Console.WriteLine(initials);
+// // Console.WriteLine(shortInitials);
+
+#endregion
+
+#region Day5
+
+// Vehicle vehicle= new();
+// vehicle.VehicleNumber = "BA PA 3455";
+// var x = vehicle.VehicleNumber;
+
+// ElectricVehicle ev = new();
+// float data  = ev.GetDistanceCovered(60);
+// Console.WriteLine(ev.GetDistanceCovered(60));
+// Console.WriteLine(data);
+
+#endregion
+
+#region Day6
+
+// IVehicle car1 = new ElectricVehicle("BA 02 PA 3455");
+// IVehicle car2 = new EngineVehicle("BA 02 PA 3455");
+//modify instantiation process
+//electric vehicle = number, range, batterycapacity
+//engine vehicle = number, mileage, engine cc
+
+ElectricVehicle car1 = new ElectricVehicle("BA 02 PA 3455", 350, 70.6f);
+Console.WriteLine($"Vehicle number: {car1.VehicleNumber}, Range: {car1.Range}, BatteryCapacity: {car1.BatteryCapacity}");
+EngineVehicle car2 = new EngineVehicle("BA 02 PA 3455", 1999.5f, 35.2f);
+Console.WriteLine($"Vehicle number: {car2.VehicleNumber}, EngineCC: {car2.EngineCC}, BatteryCapacity: {car2.Mileage}");
+
+Generics g = new ();
+g.PrintDetails(car1.VehicleNumber, car2.VehicleNumber);
+
+Generics<string, float> g2 = new ();
+g2.PrintDetails(car1.VehicleNumber,car1.Range);
+
 
 #endregion
