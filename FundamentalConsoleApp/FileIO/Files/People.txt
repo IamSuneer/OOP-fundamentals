@@ -1,0 +1,9 @@
+Name: Suneer Ranjitkar
+Date of Birth : Saturday, December 7, 1996
+National Id: 1
+Name: Binaya R. Devkota
+Date of Birth : Wednesday, July 7, 1999
+National Id: 2
+Name: Tester Man
+Date of Birth : Monday, January 1, 0001
+National Id: 3

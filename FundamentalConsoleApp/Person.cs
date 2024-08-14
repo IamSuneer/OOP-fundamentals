@@ -25,4 +25,6 @@ class Person
         Console.WriteLine($"Name: {name}\n Date of Birth : {dob.ToLongDateString()}\n National Id: {nid}");
         Console.WriteLine($"Name: {name}\n Date of Birth : {dob.ToString("ddd MM dd, yyy")}\n National Id: {nid}");
     }
+
+    public static string PrintDetails(Person person) => $"Name: {person.name}\nDate of Birth : {person.dob.ToLongDateString()}\nNational Id: {person.nid}";
 }

@@ -156,10 +156,21 @@
 
 #region Day8
 
-using FundamentalConsoleApp;
+//using FundamentalConsoleApp;
 
-Linq.PassMark();
+//Linq.PassMark();
+
+#endregion
 
 
+#region Day9
+
+using FundamentalConsoleApp.FileIO;
+
+FileHandler fileHandler = new FileHandler();
+//fileHandler.ReadFile();
+//fileHandler.WriteFile();
+fileHandler.WriteEmployeesToFile(fileHandler.ReadFile());
+//tsv,tab seperated value - if data contains , as a unit.
 
 #endregion
