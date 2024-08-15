@@ -165,12 +165,29 @@
 
 #region Day9
 
-using FundamentalConsoleApp.FileIO;
+//using FundamentalConsoleApp.FileIO;
 
-FileHandler fileHandler = new FileHandler();
-//fileHandler.ReadFile();
-//fileHandler.WriteFile();
-fileHandler.WriteEmployeesToFile(fileHandler.ReadFile());
-//tsv,tab seperated value - if data contains , as a unit.
+//FileHandler fileHandler = new FileHandler();
+////fileHandler.ReadFile();
+////fileHandler.WriteFile();
+//fileHandler.WriteEmployeesToFile(fileHandler.ReadFile());
+////tsv,tab seperated value - if data contains , as a unit.
+
+#endregion
+
+#region Day10
+
+////using FundamentalConsoleApp.FileIO;
+
+////FolderHandler folderHandler = new FolderHandler();
+////folderHandler.CreateFolder("Teksewa");
+////folderHandler.CreateFolder("Reports", $"C:\\Users\\suneer_teksewa\\OneDrive\\Desktop\\Dotnet Training\\");
+
+//using FundamentalConsoleApp;
+
+//ParallelAndAsync parallelAndAsync = new ParallelAndAsync();
+////parallelAndAsync.ComputeSequencial();
+////parallelAndAsync.ComputeParallel();
+//Console.WriteLine(await parallelAndAsync.NetWorkCall());
 
 #endregion

@@ -52,4 +52,14 @@ internal class FileHandler
         //Console.WriteLine(peopleText);
         File.WriteAllLines(fileFullPath, peopleText);
     }
+
+    public void GetFileInfo()
+    {
+        string fileFullPath = @"C:\Users\suneer_teksewa\OneDrive\Desktop\Dotnet Training\Github Training\OOP-fundamentals\FundamentalConsoleApp\FileIO\Files\People.txt";
+        FileInfo fileInfo = new FileInfo(fileFullPath);
+        Console.WriteLine(fileInfo.FullName);
+        Console.WriteLine(fileInfo.CreationTime);
+        Console.WriteLine(fileInfo.LastAccessTime);
+        Console.WriteLine($"{fileInfo.Length / 1024: f2} kb");
+    }
 }
